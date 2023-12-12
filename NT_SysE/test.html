@@ -1,19 +1,66 @@
 <html>
     <head>
-        <script src="./EquationS.js"></script>
-    </head>
-    <body>
-        <script>
-            function ap() {
 
+        <script src="./EquationS.js"></script>
+
+        <script src="./math.js"></script><!--Math.js to get partial derivative of a function-->
+
+        <style>
+
+            button {
+                background-color: #5dcde9;
+                border-radius: 10px;
             }
-        </script>
-        <p>Equation count:<input type="text" id="count" value="2"></p>
-        <div id="container">
-            <p>Equation 2:<input type="text" class="input"></p>
-            <p>Equation 2:<input type="text" class="input"></p>
+
+            input {
+                background-color: antiquewhite;
+            }
+
+            #container,#uwu {
+                border-radius: 20px;
+                border: solid 5px;
+                background-color: #5dcde9;
+                padding: 10px 10px 10px 10px;
+                margin-bottom: 10px;
+                margin-right: 75%;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div id="uwu">
+            <p>The equation count must be equal to variable count and some time newton method doesn't work even that system equation have real solution.</p>
+            <p>Equation count:<input type="text" id="count" value="2"></p>
+            <p>Initial values for each var (separated by ";"):<input type="text" id="guess"></p>
+            <p>Max step count:<input type="text" id="step" value="1"></p>
         </div>
+        
+        <div id="container">
+
+            <p>Equation 2:<input type="text" class="input"></p>
+
+            <p>Equation 2:<input type="text" class="input"></p>
+
+        </div>
+
         <button type="button" onclick="ap();">Click here to change equation count!</button>
-        <button type="button" onclick="run();">Click here to run</button>
+
+        <button type="button" onclick="run();">Click here to run.</button>
+
+        <script>
+
+            var e = document.getElementById("count"), c = document.getElementById("container");
+
+            function ap() {
+                var i = '',ll = e.value;
+                for (let l = 1;l <= ll;l++) {
+                    i += '<p>Equation ' + l + ':<input type="text" class="input"></p>';
+                }
+                c.innerHTML = i;
+            }
+
+        </script>
     </body>
 </html>
