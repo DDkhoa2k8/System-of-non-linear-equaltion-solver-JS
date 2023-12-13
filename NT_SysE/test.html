@@ -20,9 +20,19 @@
                 border-radius: 20px;
                 border: solid 5px;
                 background-color: #5dcde9;
+                padding: 10px 10px 0px 10px;
+                margin-bottom: 10px;
+                width: 700px;
+            }
+
+            #box {
+                height: 347px;
+                display: inline-block;
+                border-radius: 20px;
+                border: solid 5px;
+                background-color: #5dcde9;
                 padding: 10px 10px 10px 10px;
                 margin-bottom: 10px;
-                margin-right: 75%;
             }
 
         </style>
@@ -30,18 +40,24 @@
 
     <body>
 
-        <div id="uwu">
-            <p>The equation count must be equal to variable count and some time newton method doesn't work even that system equation have real solution.</p>
-            <p>Equation count:<input type="text" id="count" value="2"></p>
-            <p>Initial values for each var (separated by ";"):<input type="text" id="guess"></p>
-            <p>Max step count:<input type="text" id="step" value="1"></p>
-        </div>
-        
-        <div id="container">
+        <div id="big_box">
 
-            <p>Equation 2:<input type="text" class="input"></p>
+            <div id="uwu">
+                <p>The equation count must be equal to variable count and some time newton method doesn't work even that system equation have real solution.</p>
+                <p>Equation count:<input type="text" id="count" value="2"></p>
+                <p>Initial values for each var ,separated by ";" and if you leave this feld blank the program will pick random number:<input type="text" id="guess" value="x=1;y=1"></p>
+                <p>Max step count:<input type="text" id="step" value="1"></p>
+            </div>
+            
+            <div id="box">6565664</div>
 
-            <p>Equation 2:<input type="text" class="input"></p>
+            <div id="container">
+
+                <p>Equation 2:<input type="text" class="input" value="x*y"></p>
+
+                <p>Equation 2:<input type="text" class="input" value="x^2+y^2"></p>
+
+            </div>
 
         </div>
 
